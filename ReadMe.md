@@ -35,7 +35,7 @@ This pipeline was originally designed as the data foundation for a predictive mo
 
 As more data is aggregated, an unsupervised learning model (K-means clustering) will be applied to participant statistical profiles and historical outcomes to identify performance-based groupings and patterns.
 
-The goal is to use these cluseters as inputs for a predictive model capable of estimating conflict outcomes.
+The goal is to use these clusters as inputs for a predictive model capable of estimating conflict outcomes.
 
 ### Architecture
 REST API
