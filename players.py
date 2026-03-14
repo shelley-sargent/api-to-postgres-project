@@ -94,7 +94,7 @@ for pid, contrib_stats in contributor_by_player.items():
 # -------------------------------------------------------
 # 4. Build DataFrame
 # -------------------------------------------------------
-snapshot_date = date.today()
+snapshot_date = datetime.utcnow().replace(minute=0, second=0, microsecond=0)
 rows = []
 for pid, stats in player_personal_stats.items():
     row = {'snapshot_date': snapshot_date, **stats}
