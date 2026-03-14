@@ -2,6 +2,7 @@ from logging import exception
 from datetime import date
 import api
 import time
+import pandas as pd
 
 # -- break personal stats into chunks (API call allows for 10 maximum)
 stat_chunks = stat_chunks = [
