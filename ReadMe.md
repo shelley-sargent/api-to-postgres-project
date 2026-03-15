@@ -58,8 +58,23 @@ Use unsupervised machine learning to analyze both attack outcomes and player sta
 ```
 
 4. **Set up database schema**
+
+Create the database and user in PostgreSQL, then run the schema file:
+```bash
+   sudo -u postgres psql
+```
+```sql
+   CREATE DATABASE tornbot;
+   CREATE USER tornbot_user WITH PASSWORD 'your_password';
+   GRANT ALL PRIVILEGES ON DATABASE tornbot TO tornbot_user;
+   \q
+```
+   Then apply the schema:
+```bash
+   sudo -u postgres psql -d tornbot -f schema.sql
+```
    
-   See the [Database Schema](#database-schema) section below for table creation scripts.
+
 
 5. **Configure cron jobs**
 ```bash
@@ -71,10 +86,6 @@ Use unsupervised machine learning to analyze both attack outcomes and player sta
    0 */6 * * * /usr/bin/python3 /path/to/file/attacks.py >> /path/to/file/cron.log 2>&1
    0 * * * * /usr/bin/python3 /path/to/file/players.py >> /path/to/file/cron.log 2>&1
 ```
-
-## Database Schema
-
-*(Documentation to be added)*
 
 ## Skills Demonstrated
 
